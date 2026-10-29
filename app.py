@@ -10,7 +10,7 @@ arquivo = "data/Consolidador Abax.xlsx"
 st.session_state["arquivo"] = arquivo
 
 @st.cache_data(ttl=30)
-df = carregar_dados(arquivo)
+df = carregar_dados(st.session_state["arquivo"])
 
 df = aplicar_filtros_globais(df)
 
