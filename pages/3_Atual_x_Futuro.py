@@ -8,9 +8,7 @@ st.title("🔄 Atual x Futuro")
 
 arquivo = arquivo = st.session_state.get("arquivo")
 
-df = carregar_dados(
-    arquivo
-)
+df = carregar_dados()
 
 df = aplicar_filtros_globais(df)
 
