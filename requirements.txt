@@ -2,4 +2,14 @@ streamlit
 pandas
 openpyxl
 plotly
+streamlit-calendar
+Pillow
+reportlab
+streamlit-javascript
+requests
+polars
 numpy
+pyarrow
+xlsx2csv
+msal
+requests
