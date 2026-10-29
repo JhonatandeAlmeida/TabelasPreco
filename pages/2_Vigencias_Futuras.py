@@ -4,7 +4,7 @@ import plotly.express as px
 from utils.carregamento import carregar_dados
 from utils.filtros import aplicar_filtros_globais
 
-@st.cache_data(ttl=30)
+
 df = carregar_dados(st.session_state["arquivo"])
 
 df = aplicar_filtros_globais(df)
