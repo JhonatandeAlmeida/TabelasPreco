@@ -4,9 +4,6 @@ import plotly.graph_objects as go
 from utils.carregamento import carregar_dados
 from utils.filtros import aplicar_filtros_globais
 
-if "arquivo" not in st.session_state:
-    st.stop()
-
 st.title("🔄 Atual x Futuro")
 
 df = carregar_dados(
