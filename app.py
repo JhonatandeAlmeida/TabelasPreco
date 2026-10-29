@@ -8,10 +8,7 @@ st.set_page_config(
 
 st.title("📊 Consolidador ABAX")
 
-arquivo = st.sidebar.file_uploader(
-    "Selecione o Excel",
-    type=["xlsx"]
-)
+arquivo = "data/Consolidador Abax.xlsx"
 
 if arquivo:
     st.session_state["arquivo"] = arquivo
