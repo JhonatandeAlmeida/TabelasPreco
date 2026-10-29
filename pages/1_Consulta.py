@@ -1,11 +1,14 @@
 import streamlit as st
 from utils.carregamento import carregar_dados
 from utils.exportacao import exportar_excel
+from utils.filtros import aplicar_filtros_globais
 
 if "arquivo" not in st.session_state:
     st.stop()
 
 df = carregar_dados(st.session_state["arquivo"])
+
+df = aplicar_filtros_globais(df)
 
 st.title("📋 Consulta")
 
