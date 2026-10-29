@@ -5,6 +5,11 @@ def aplicar_filtros_globais(df):
 
     st.sidebar.header("Filtros Globais")
 
+    if st.sidebar.button(
+        "🔄 Limpar Filtros"
+    ):
+        st.rerun()
+
     site = st.sidebar.multiselect(
         "Site",
         sorted(
