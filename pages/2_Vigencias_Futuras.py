@@ -4,8 +4,6 @@ import plotly.express as px
 from utils.carregamento import carregar_dados
 from utils.filtros import aplicar_filtros_globais
 
-if "arquivo" not in st.session_state:
-    st.stop()
 
 df = carregar_dados(st.session_state["arquivo"])
 
