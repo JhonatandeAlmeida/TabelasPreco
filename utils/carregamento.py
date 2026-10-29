@@ -1,6 +1,8 @@
 import pandas as pd
 import streamlit as st
 
+arquivo = "data/Consolidador Abax.xlsx"
+
 @st.cache_data(ttl=3600)
 def carregar_dados(arquivo):
 
