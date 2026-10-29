@@ -26,7 +26,7 @@ def carregar_dados(arquivo):
                 "D_Base_Loja_GEO[SITE]"
             ]
         ],
-        left_on="Cod Comerial",
+        left_on="Comercial",
         right_on="Cod CDD",
         how="left"
     )
