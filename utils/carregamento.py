@@ -51,5 +51,20 @@ def carregar_dados(arquivo):
         how="left"
     )
 
+    base["Vigência INI"] = pd.to_datetime(
+        base["Vigência INI"],
+        errors="coerce"
+    )
+    
+    base["Valor C/ Prazo Adic."] = pd.to_numeric(
+        base["Valor C/ Prazo Adic."],
+        errors="coerce"
+    )
+    
+    base["Vlr Unit c/ADF Incr"] = pd.to_numeric(
+        base["Vlr Unit c/ADF Incr"],
+        errors="coerce"
+    )
+
     return base
 
