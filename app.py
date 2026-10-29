@@ -7,6 +7,7 @@ from utils.filtros import aplicar_filtros_globais
     #st.stop()
 
 arquivo = "data/Consolidador Abax.xlsx"
+st.session_state["arquivo"] = arquivo
 
 df = carregar_dados(arquivo)
 
