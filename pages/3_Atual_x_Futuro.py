@@ -6,9 +6,10 @@ from utils.filtros import aplicar_filtros_globais
 
 st.title("🔄 Atual x Futuro")
 
+arquivo = arquivo = st.session_state.get("arquivo")
 
 df = carregar_dados(
-    st.session_state["arquivo"]
+    arquivo
 )
 
 df = aplicar_filtros_globais(df)
