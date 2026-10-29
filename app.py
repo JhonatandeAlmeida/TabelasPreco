@@ -9,6 +9,7 @@ from utils.filtros import aplicar_filtros_globais
 arquivo = "data/Consolidador Abax.xlsx"
 st.session_state["arquivo"] = arquivo
 
+@st.cache_data(ttl=30)
 df = carregar_dados(arquivo)
 
 df = aplicar_filtros_globais(df)
