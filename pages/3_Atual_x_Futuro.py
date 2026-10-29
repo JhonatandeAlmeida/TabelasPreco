@@ -6,7 +6,7 @@ from utils.filtros import aplicar_filtros_globais
 
 st.title("🔄 Atual x Futuro")
 
-@st.cache_data(ttl=30)
+
 df = carregar_dados(
     st.session_state["arquivo"]
 )
