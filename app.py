@@ -7,10 +7,23 @@ from utils.filtros import aplicar_filtros_globais
     #st.stop()
 
 arquivo = "data/Consolidador Abax.xlsx"
-st.session_state["arquivo"] = arquivo
 
+if (
+        "arquivo_nome" not in st.session_state
+        or st.session_state["arquivo_nome"] != arquivo.name
+    ):
 
-df = carregar_dados(st.session_state["arquivo"])
+        with st.spinner("Processando arquivo..."):
+
+            df = carregar_dados(arquivo)
+
+            st.session_state["arquivo_nome"] = arquivo.name
+            st.session_state["base_abax"] = df
+            
+#st.session_state["arquivo"] = arquivo
+#df = carregar_dados(st.session_state["arquivo"])
+
+df = st.session_state["base_abax"].copy()
 
 df = aplicar_filtros_globais(df)
 
