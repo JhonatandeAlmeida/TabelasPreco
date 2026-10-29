@@ -3,8 +3,8 @@ from utils.carregamento import carregar_dados
 from utils.exportacao import exportar_excel
 from utils.filtros import aplicar_filtros_globais
 
-if "arquivo" not in st.session_state:
-    st.stop()
+#if "arquivo" not in st.session_state:
+    #st.stop()
 
 arquivo = "data/Consolidador Abax.xlsx"
 
