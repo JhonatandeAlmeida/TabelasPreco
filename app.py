@@ -27,10 +27,7 @@ def carregar_dados(arquivo):
     return df_abax, df_comercial, df_redes
 
 
-arquivo = st.file_uploader(
-    "Selecione a planilha",
-    type=["xlsx"]
-)
+arquivo = "data/calendario_promocional.xlsx"
 
 if arquivo:
 
