@@ -27,7 +27,7 @@ def carregar_dados(arquivo):
     return df_abax, df_comercial, df_redes
 
 
-arquivo = "data/calendario_promocional.xlsx"
+arquivo = "data/Consolidador Abax.xlsx"
 
 if arquivo:
 
