@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from utils.carregamento import carregar_dados
+from utils.filtros import aplicar_filtros_globais
 
 if "arquivo" not in st.session_state:
     st.stop()
@@ -11,6 +12,8 @@ st.title("🔄 Atual x Futuro")
 df = carregar_dados(
     st.session_state["arquivo"]
 )
+
+df = aplicar_filtros_globais(df)
 
 df["Vigência INI"] = pd.to_datetime(
     df["Vigência INI"]
