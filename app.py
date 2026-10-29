@@ -6,10 +6,10 @@ from utils.filtros import aplicar_filtros_globais
 #if "arquivo" not in st.session_state:
     #st.stop()
 
-arquivo = "data/Consolidador Abax.xlsx"
 
 
-df = carregar_dados(arquivo)
+
+df = carregar_dados()
 
 st.session_state["arquivo_nome"] = arquivo.name
 st.session_state["base_abax"] = df
