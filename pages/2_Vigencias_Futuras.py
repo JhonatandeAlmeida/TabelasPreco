@@ -4,8 +4,9 @@ import plotly.express as px
 from utils.carregamento import carregar_dados
 from utils.filtros import aplicar_filtros_globais
 
+arquivo = arquivo = st.session_state.get("arquivo")
 
-df = carregar_dados(st.session_state["arquivo"])
+df = carregar_dados(arquivo)
 
 df = aplicar_filtros_globais(df)
 
