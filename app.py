@@ -41,7 +41,7 @@ if arquivo:
                 "D_Base_Loja_GEO[SITE]"
             ]
         ],
-        left_on="Comerial",
+        left_on="Comercial",
         right_on="Cod CDD",
         how="left"
     )
