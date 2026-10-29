@@ -3,21 +3,8 @@ from utils.carregamento import carregar_dados
 from utils.exportacao import exportar_excel
 from utils.filtros import aplicar_filtros_globais
 
-#if "arquivo" not in st.session_state:
-    #st.stop()
-
-
-
-
 df = carregar_dados()
 
-st.session_state["arquivo_nome"] = arquivo.name
-st.session_state["base_abax"] = df
-            
-#st.session_state["arquivo"] = arquivo
-#df = carregar_dados(st.session_state["arquivo"])
-
-df = st.session_state["base_abax"].copy()
 
 df = aplicar_filtros_globais(df)
 
